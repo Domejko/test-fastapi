@@ -25,7 +25,7 @@ class Post(Base):
     updated_at = Column(TIMESTAMP, onupdate=text('now()'), nullable=True)
     user_id = Column(Integer, nullable=False)
 
-    ForeignKeyConstraint(['user_id'], ['user.id'], ondelete='CASCADE')
+    ForeignKeyConstraint(['user_id'], ['users.id'], ondelete='CASCADE')
     PrimaryKeyConstraint(id)
 
     owner = relationship('User')
@@ -37,5 +37,5 @@ class Vote(Base):
     user_id = Column(Integer, nullable=False)
 
     ForeignKeyConstraint(['post_id'], ['posts.id'], ondelete='CASCADE')
-    ForeignKeyConstraint(['user_id'], ['user.id'], ondelete='CASCADE')
+    ForeignKeyConstraint(['user_id'], ['users.id'], ondelete='CASCADE')
     PrimaryKeyConstraint(post_id, user_id)
