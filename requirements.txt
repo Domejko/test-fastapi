@@ -1,3 +1,4 @@
+python==3.11.0
 alembic==1.11.1
 annotated-types==0.5.0
 anyio==3.7.1
@@ -46,4 +47,3 @@ uvicorn==0.22.0
 uvloop==0.17.0
 watchfiles==0.19.0
 websockets==11.0.3
-python==3.11.0
