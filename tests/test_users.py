@@ -35,7 +35,7 @@ def test_get_user(client, create_test_user):
     ('test@gmail.com', 'password123'),
     ('test@gmail.com', 'password'),
     ('test@test.com', 'password'),
-    (None, 'password123'),
+    (None, 'password1234'),
     ('test@gmail.com', None)
 ])
 def test_user_login(client, email, password, create_test_user):
