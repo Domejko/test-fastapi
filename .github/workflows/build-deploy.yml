@@ -80,14 +80,15 @@ jobs:
       #       ${{runner.os}}-buildx
 
   Deploy:
+    environment:
+      name: testing
     runs-on: ubuntu-latest
     needs: [Build]   
       
     steps:
-      - name: Render Deployment 
-        uses: bounceapp/render-action@0.6.0
+      - name: Deploy to production
+        uses: johnbeynon/render-deploy-action@v0.0.8
         with:
-          render-token: ${{secrets.RENDER_TOKEN}}
           service-id: ${{secrets.RENDER_DEPLOY_HOOK}}
-          retries: 10
-          
+          api-key: ${{secrets.RENDER_TOKEN}}
+
