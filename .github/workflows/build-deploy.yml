@@ -81,7 +81,7 @@ jobs:
 
   Deploy:
     environment:
-      name: testing
+      name: production
     runs-on: ubuntu-latest
     needs: Build
       
