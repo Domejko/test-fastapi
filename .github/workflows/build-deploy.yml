@@ -10,15 +10,15 @@ jobs:
     environment:
       name: testing
     env:
-      DATABASE_HOSTNAME=${{secrets.DATABASE_HOSTNAME}}
-      DATABASE_PORT=${{secrets.DATABASE_PORT}}
-      DATABASE_PASSWORD=${{secrets.DATABASE_PASSWORD}}
-      DATABASE_NAME=${{secrets.DATABASE_NAME}}
-      TEST_DATABASE_NAME = ${{secrets.TEST_DATABASE_NAME}}
-      DATABASE_USERNAME=${{secrets.DATABASE_USERNAME}}
-      SECRET_KEY=${{secrets.SECRET_KEY}}
-      ALGORITHM=${{secrets.ALGORITHM}}
-      ACCESS_TOKEN_EXPIRE_TIME=${{secrets.ACCESS_TOKEN_EXPIRE_TIME}}
+      DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME}}
+      DATABASE_PORT: ${{secrets.DATABASE_PORT}}
+      DATABASE_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
+      DATABASE_NAME: ${{secrets.DATABASE_NAME}}
+      TEST_DATABASE_NAME: ${{secrets.TEST_DATABASE_NAME}}
+      DATABASE_USERNAME: ${{secrets.DATABASE_USERNAME}}
+      SECRET_KEY: ${{secrets.SECRET_KEY}}
+      ALGORITHM: ${{secrets.ALGORITHM}}
+      ACCESS_TOKEN_EXPIRE_TIME: ${{secrets.ACCESS_TOKEN_EXPIRE_TIME}}
     services:
       postgres:
         image: postgres
