@@ -7,7 +7,7 @@ on:
     branches: ['main']
 jobs:
   job1:
-    environments:
+    environment:
       name: testing
     env:
       DATABASE_HOSTNAME=${{secrets.DATABASE_HOSTNAME}}
