@@ -7,7 +7,7 @@ from app import schemas
 
 def test_root(client):
     response = client.get('/')
-    assert response.json().get('message') == 'Hello World ! Succefull deploy !'
+    assert response.json().get('message') == 'Hello World ! Successful deploy !'
     assert response.status_code == 200
 
 
