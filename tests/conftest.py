@@ -2,12 +2,11 @@ import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from typing import Callable
 
 from app.config import settings as set
 from app.main import app
 from app.database import get_db
-from app import models, schemas, oauth2
+from app import models, oauth2
 
 
 

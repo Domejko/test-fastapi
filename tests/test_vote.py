@@ -35,3 +35,4 @@ def test_unauthorized_user(client, create_test_post):
     response = client.post('/vote', json={'post_id': 2, 'post_dir': 1})
 
     assert response.status_code == 401
+    
